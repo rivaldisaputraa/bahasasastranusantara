@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bahasa & Sastra Nusantara</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <script>
+    function cariKata() {
+      const kamus = {
+        "kiasan": "Ungkapan tidak langsung atau simbolik untuk makna tertentu.",
+        "afiksasi": "Proses penambahan afiks pada kata dasar.",
+        "semantik": "Ilmu tentang makna kata dan hubungan antar makna.",
+        "morfem": "Unit terkecil dalam morfologi yang memiliki makna."
+      };
+      const kata = document.getElementById("inputKamus").value.toLowerCase();
+      const hasil = kamus[kata] || "Kata tidak ditemukan dalam kamus.";
+      document.getElementById("hasilKamus").innerText = hasil;
+    }
+
+    function mulaiKuis() {
+      const pertanyaan = "Apa yang dimaksud dengan morfologi dalam linguistik?";
+      const jawaban = prompt(pertanyaan);
+      if (jawaban.toLowerCase().includes("struktur kata")) {
+        alert("Jawaban benar!");
+      } else {
+        alert("Coba lagi. Petunjuk: berhubungan dengan bentuk kata.");
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <nav class="bg-indigo-700 text-white p-4 flex justify-between">
+    <div class="font-bold text-lg">Bahasa & Sastra Nusantara</div>
+    <ul class="flex space-x-4">
+      <li><a href="#beranda" class="hover:underline">Beranda</a></li>
+      <li><a href="#tentang" class="hover:underline">Tentang</a></li>
+      <li><a href="#peta" class="hover:underline">Peta Bahasa</a></li>
+      <li><a href="#fonologi" class="hover:underline">Fonologi</a></li>
+      <li><a href="#morfologi" class="hover:underline">Morfologi</a></li>
+      <li><a href="#semantik" class="hover:underline">Semantik</a></li>
+      <li><a href="#sastra" class="hover:underline">Sastra</a></li>
+      <li><a href="#kamus" class="hover:underline">Kamus</a></li>
+      <li><a href="#game" class="hover:underline">Game</a></li>
+    </ul>
+  </nav>
+
+  <section id="beranda" class="p-8 text-center">
+    <h1 class="text-4xl font-bold mb-4">Selamat Datang di Dunia Bahasa & Sastra Nusantara</h1>
+    <p class="mb-4">Menjelajahi kekayaan bahasa dan karya sastra dari seluruh penjuru Indonesia secara interaktif.</p>
+    <img src="https://media.giphy.com/media/3oKIPwoeGErMmaI43C/giphy.gif" alt="Animasi Membaca" class="mx-auto w-72 h-72">
+  </section>
+
+  <section id="tentang" class="p-8 bg-white">
+    <h2 class="text-2xl font-bold mb-2">Tentang Website Ini</h2>
+    <p class="mb-4">Website ini mengenalkan aspek kebahasaan dan kesastraan Indonesia dengan pendekatan visual dan multimedia yang menyenangkan.</p>
+    <audio controls class="mt-4 mx-auto">
+      <source src="audio/narasi-tentang.mp3" type="audio/mpeg">
+    </audio>
+  </section>
+</body>
+</html>
